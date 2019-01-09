@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/camilaavilarinho.github.io/fewNickels-temp-website",
   plugins: [
     "gatsby-plugin-styled-components",
     `gatsby-plugin-react-helmet`,
