@@ -1,11 +1,13 @@
 import React from "react";
 import "./layout.css";
+import logo from "../assets/images/logo.png";
 
 export default ({ children }) => (
   <div>
     <div className="nav">
       <div className="nav-header">
-        <div className="nav-title">FewNickels</div>
+        {/* <div className="nav-title">FewNickels</div> */}
+        <img className="nav-logo" src={logo} alt="" />
       </div>
       <div className="nav-btn">
         <label htmlFor="nav-check">
