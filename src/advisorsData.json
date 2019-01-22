@@ -1,0 +1,16 @@
+{
+    "advisors":[
+        {
+            "name": "André Lima",
+            "title": "GIS and Environmental Advisor",
+            "description": "Geographer, Ph.D. in Remote Sensing holding more than fifteen years of experience mapping and monitoring land use land cover changes in tropical regions. He has been worked in National Institute for Space Research (INPE), EMBRAPA Satellite Monitoring. He is currently a Global Land Analysis & Discovery team member led by Dr. Matthew Hansen and Petr Potapov at the University of Maryland, Geographical Sciences department.",
+            "image": "https://static.wixstatic.com/media/19ab13_2185eba202534267825a58b46b179235~mv2.jpeg/v1/crop/x_0,y_4,w_450,h_441/fill/w_314,h_308,al_c,q_80,usm_0.66_1.00_0.01/Andre_lima.jpeg"
+        },
+        {
+            "name": "Renato Jesus",
+            "title": "Bussiness and Finance Optimization",
+            "description": "More than 10 years of experience in the Financial and Administrative areas in Multinational Companies and Large Brazilian Companies. Over 15 years coordinating public projects to improve Business Processes, Planning, Governance and IT Service Management. Skills in finance, foreign exchange operations and systems analysis.",
+            "image": "https://static.wixstatic.com/media/19ab13_7875d9e2d7704c59921ffbb5283b7bb5~mv2.jpg/v1/crop/x_0,y_0,w_960,h_943/fill/w_314,h_308,al_c,q_80,usm_0.66_1.00_0.01/foto%202018.jpg"
+        }
+    ]
+}

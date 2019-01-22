@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import andre from "../assets/images/Team/andre.png";
+import advisorsData from "../advisorsData.json";
+
+const dataAdvisors = advisorsData.advisors;
 
 const Advisors = styled.div`
   background-size: 100%;
@@ -27,7 +29,6 @@ const Cards = styled.section`
 const Card = styled.div`
   background-color: #f3f3f3;
   padding: 0.5rem;
-  grid-column: 1/2;
 `;
 
 const CardCover = styled.div`
@@ -65,28 +66,26 @@ const ItemText = styled.p`
   padding: 1rem;
 `;
 
+const advisors = dataAdvisors.map((advisor, i) => {
+  return (
+    <Card key={i}>
+      <CardCover>
+        <CardImage src={advisor.image} alt="" />
+      </CardCover>
+      <CardDescription>
+        <CardTitle>{advisor.name}</CardTitle>
+        <CardSubtitle>{advisor.title}</CardSubtitle>
+        <ItemText>{advisor.description}</ItemText>
+      </CardDescription>
+    </Card>
+  );
+});
+
 export default () => (
   <Advisors id="advisors">
     <H2>Advisors</H2>
     <Cards>
-      <Card>
-        <CardCover>
-          <CardImage src={andre} alt="" />
-        </CardCover>
-        <CardDescription>
-          <CardTitle>André Lima</CardTitle>
-          <CardSubtitle>GIS and Environmental Advisor</CardSubtitle>
-          <ItemText>
-            Geographer, Ph.D. in Remote Sensing holding more than fifteen years
-            of experience mapping and monitoring land use land cover changes in
-            tropical regions. He has been worked in National Institute for Space
-            Research (INPE), EMBRAPA Satellite Monitoring. He is currently a
-            Global Land Analysis & Discovery team member led by Dr. Matthew
-            Hansen and Petr Potapov at the University of Maryland, Geographical
-            Sciences department.
-          </ItemText>
-        </CardDescription>
-      </Card>
+      {advisors}
     </Cards>
   </Advisors>
 );
