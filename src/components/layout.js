@@ -26,6 +26,7 @@ export default ({ children }) => (
         <a href="#roadmap">Roadmap</a>
         <a href="#team">Team</a>
         <a href="#footer">Info</a>
+        <a className="token-button" href="#footer">Buy Tokens</a>
       </div>
     </div>
     {children}
