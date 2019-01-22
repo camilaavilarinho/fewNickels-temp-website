@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import teamBackground from "../assets/images/platform2.png";
-import teamData from "./teamData.json";
+import teamData from "../teamData.json";
 
 const team = teamData.team;
 
