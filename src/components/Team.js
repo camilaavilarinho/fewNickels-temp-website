@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import teamBackground from "../assets/images/platform2.png";
-import isaque from "../assets/images/Team/isaque.png";
-import leisy from "../assets/images/Team/leisy.png";
-import magnus from "../assets/images/Team/magnus.png";
-import samuel from "../assets/images/Team/samuel.png";
-import henrique from "../assets/images/Team/henrique.png";
+import teamData from "./teamData.json";
+
+const team = teamData.team;
 
 const Team = styled.div`
   background: linear-gradient(rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 0.7)),
@@ -71,84 +69,24 @@ const ItemText = styled.p`
   padding: 1rem;
 `;
 
+const members = team.map((member, i) => {
+  return (
+    <Card key={i}>
+      <CardCover>
+        <CardImage src={member.image} alt="" />
+      </CardCover>
+      <CardDescription>
+        <CardTitle>{member.name}</CardTitle>
+        <CardSubtitle>{member.title}</CardSubtitle>
+        <ItemText>{member.description}</ItemText>
+      </CardDescription>
+    </Card>
+  );
+});
+
 export default () => (
   <Team id="team">
     <H2>Team</H2>
-    <Cards>
-      <Card>
-        <CardCover>
-          <CardImage src={isaque} alt="" />
-        </CardCover>
-        <CardDescription>
-          <CardTitle>Isaque Eberhardt</CardTitle>
-          <CardSubtitle>CEO & Co-Founder</CardSubtitle>
-          <ItemText>
-            More than 10 years as data scientist and big data developer for
-            agriculture. Near 15 years working in the agriculture related
-            subject. Major skills in satellite images, crops modelling, GIS and
-            crops modelling for systems.
-          </ItemText>
-        </CardDescription>
-      </Card>
-      <Card>
-        <CardCover>
-          <CardImage src={leisy} alt="" />
-        </CardCover>
-        <CardDescription>
-          <CardTitle>Leisy Teixeira</CardTitle>
-          <CardSubtitle>COO & Co-Founder</CardSubtitle>
-          <ItemText>
-            More than 10 years of experience in public and private sectors,
-            working in agriculture, logistics and public concessions. Major
-            skills in business management, agile methods, design thinking and
-            gamification.
-          </ItemText>
-        </CardDescription>
-      </Card>
-      <Card>
-        <CardCover>
-          <CardImage src={magnus} alt="" />
-        </CardCover>
-        <CardDescription>
-          <CardTitle>Magnus Dufwa</CardTitle>
-          <CardSubtitle>CTO</CardSubtitle>
-          <ItemText>
-            More than 14 years of experience in technology in different fields
-            as payments systems, system architect, IT consultant. Major skills
-            in IT technology, blockchain developer, payments systems and
-            business technology development.
-          </ItemText>
-        </CardDescription>
-      </Card>
-      <Card>
-        <CardCover>
-          <CardImage src={samuel} alt="" />
-        </CardCover>
-        <CardDescription>
-          <CardTitle>Samuel Baker</CardTitle>
-          <CardSubtitle>Full Stack Developer</CardSubtitle>
-          <ItemText>
-            More than 10 years in the IT industry with the military and civilian
-            sectors. Major skills in Front-End and Back-End Software Development
-            including SSIS, Cloud Computing, SQL, and Server-Side scripting.
-            Main programming languages include C# and ES6 based languages.
-          </ItemText>
-        </CardDescription>
-      </Card>
-      <Card>
-        <CardCover>
-          <CardImage src={henrique} alt="" />
-        </CardCover>
-        <CardDescription>
-          <CardTitle>Henrique Sena</CardTitle>
-          <CardSubtitle>Full Stack Developer</CardSubtitle>
-          <ItemText>
-            Working with Software developer and Data authenticity. Front-End and
-            Back-end with node.js ecosystem. Blockchain Technologies on
-            development and Research.
-          </ItemText>
-        </CardDescription>
-      </Card>
-    </Cards>
+    <Cards>{members}</Cards>
   </Team>
 );

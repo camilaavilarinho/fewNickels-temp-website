@@ -1,0 +1,45 @@
+{
+    "team": [{
+            "name": "Isaque Eberhardt",
+            "title": "CEO & Co-Founder",
+            "description": "More than 10 years as data scientist and big data developer for agriculture. Near 15 years working in the agriculture related subject. Major skills in satellite images, crops modelling, GIS and crops modelling for systems.",
+            "image": "https://static.wixstatic.com/media/19ab13_83124cea269a4a538c8a17de794f172a~mv2.jpg/v1/crop/x_0,y_135,w_632,h_624/fill/w_314,h_308,al_c,q_80,usm_0.66_1.00_0.01/isaque_foto.jpg"
+        },
+        {
+            "name": "Leisy Teixeira",
+            "title": "COO & Co-Founder",
+            "description": "More than 10 years of experience in public and private sectors, working in agriculture, logistics and public concessions. Major skills in business management, agile methods, design thinking and gamification.",
+            "image": "https://static.wixstatic.com/media/19ab13_7a252a4fcb8c4e78b9ec59b125957ca0~mv2.jpg/v1/crop/x_109,y_6,w_294,h_289/fill/w_314,h_308,al_c,lg_1,q_80/Leisy.jpg"
+        },
+        {
+            "name": "Magnus Dufwa",
+            "title": "CTO",
+            "description": "More than 14 years of experience in technology in different fields as payments systems, system architect, IT consultant. Major skills in IT technology, blockchain developer, payments systems and business technology development.",
+            "image": "https://static.wixstatic.com/media/19ab13_3949be92f0c24b25867cc666332e164c~mv2.jpeg/v1/crop/x_53,y_0,w_237,h_233/fill/w_314,h_308,al_c,lg_1,q_80/magnus.jpeg"
+        },
+        {
+            "name": "Samuel Baker",
+            "title": "Full Stack Developer",
+            "description": "More than 10 years in the IT industry with the military and civilian sectors. Major skills in Front-End and Back-End Software Development including SSIS, Cloud Computing, SQL, and Server-Side scripting. Main programming languages include C# and ES6 based languages.",
+            "image": "https://static.wixstatic.com/media/19ab13_3a3cc314df2441b48c23478c8b1e37c7~mv2_d_1431_2160_s_2.jpg/v1/crop/x_0,y_255,w_1431,h_1404/fill/w_314,h_308,al_c,q_80,usm_0.66_1.00_0.01/Samuel_baker.jpg"
+        },
+        {
+            "name": "Henrique Sena",
+            "title": "Full Stack Developer",
+            "description": "Working with Software developer and Data authenticity. Front-End and Back-end with node.js ecosystem. Blockchain Technologies on development and Research.",
+            "image": "https://static.wixstatic.com/media/19ab13_47703c3cbd9743aaa2c66702dc9717e1~mv2.jpeg/v1/crop/x_42,y_375,w_653,h_642/fill/w_314,h_308,al_c,q_80,usm_0.66_1.00_0.01/henrique_sena.jpeg"
+        },
+        {
+            "name": "Camila Vilarinho",
+            "title": "Full Stack Developer",
+            "description": "Software Developer with experience working in both Frontend and Backend technologies with emphasis on Javascript stack and a strong focus on Blockchain technology.",
+            "image": "https://static.wixstatic.com/media/19ab13_b2c2a67eb2134a24a9cf2d7076ad6756~mv2.jpeg/v1/crop/x_0,y_2,w_200,h_196/fill/w_280,h_274,al_c,lg_1,q_80/Camila.jpeg"
+        },
+        {
+            "name": "Guilherme Melo",
+            "title": "Full Stack Developer",
+            "description": "Software Developer passionate about the web. Experienced working with Front-End and Back-End technologies such as Node.js, Python and Java.",
+            "image": "https://static.wixstatic.com/media/19ab13_dffd8a3d72fe47da9bad44b73bb7a0eb~mv2.png/v1/crop/x_0,y_89,w_478,h_469/fill/w_322,h_322,al_c,usm_0.66_1.00_0.01/Guilherme_mod.png"
+        }
+    ]
+}
