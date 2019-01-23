@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import crops from "../assets/images/crops.png";
 import connect from "../assets/images/connect.svg";
 
@@ -86,10 +87,9 @@ export default () => (
       <span className="referral-span">
         <img src={connect} className="referral-img" alt="" />
       </span>
-      <a className="referral-btn" href="/">
+      <Link className="referral-btn" to="/referral/">
         Join our referral program!
-      </a>
-
+      </Link>
     </ReferralContainer>
   </Header>
 );
