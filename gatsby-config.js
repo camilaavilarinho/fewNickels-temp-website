@@ -21,6 +21,9 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {}
     },
-    "gatsby-plugin-offline"
+    "gatsby-plugin-offline",
+    {
+      resolve: `@wapps/gatsby-plugin-material-ui`,
+    },
   ]
 };
