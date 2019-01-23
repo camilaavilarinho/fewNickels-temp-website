@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import crops from "../assets/images/crops.png";
 import connect from "../assets/images/connect.svg";
 
-const mediaQuery = '(max-width: 906px)';
+const mediaQuery = "(max-width: 906px)";
 
 const Header = styled.header`
   display: grid;
@@ -11,7 +12,7 @@ const Header = styled.header`
   color: #fff;
   min-height: 600px;
   margin: 0;
-  background: linear-gradient(rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 0.7)),
+  background: linear-gradient(rgba(0, 50, 0, 0.5), rgba(0, 50, 0, 0.7)),
     url(${crops});
   background-size: 100%;
   background-position: bottom right;
@@ -25,6 +26,10 @@ const HeaderContainer = styled.div`
   padding: 100px;
 `;
 
+const ReferralContainer = styled.div`
+  align-self: center;
+`;
+
 const Title = styled.h1`
   font-size: 50px;
 `;
@@ -36,14 +41,14 @@ const Subtitle = styled.h3`
   font-weight: 300;
 `;
 
-const CoverImg = styled.img`
-  width: 400px;
-  height: 400px;
+/* const CoverImg = styled.img`
+  width: 300px;
+  height: 300px;
   margin: 8rem;
   @media ${mediaQuery} {
     display: none;
   }
-`;
+`; */
 
 const Button = styled.a`
   display: inline-block;
@@ -54,9 +59,9 @@ const Button = styled.a`
   border-radius: 5px;
   text-decoration: none;
   &:hover {
-      background-color: #a29bfe;
-      color: #dfe6e9;
-      border: 1.5px solid #dfe6e9;
+    background-color: #10ac84;
+    color: #dfe6e9;
+    border: 1.5px solid #10ac84;
   }
 `;
 
@@ -74,12 +79,17 @@ export default () => (
       >
         Read the White Paper - En
       </Button>
-      <Button href="/">
-        Leia o White Paper - Pt-br
-      </Button>
+      <Button href="/">Leia o White Paper - Pt-br</Button>
     </HeaderContainer>
-    <div>
-      <CoverImg src={connect} alt="" />
-    </div>
+    <ReferralContainer>
+      {/* <Button href="/">Join our referral program!</Button> */}
+      {/* <CoverImg src={connect} alt="" /> */}
+      <span className="referral-span">
+        <img src={connect} className="referral-img" alt="" />
+      </span>
+      <Link className="referral-btn" to="/referral/">
+        Join our referral program!
+      </Link>
+    </ReferralContainer>
   </Header>
 );

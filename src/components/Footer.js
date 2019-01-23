@@ -13,7 +13,7 @@ import background from "../assets/images/platform1.png";
 
 const Footer = styled.div`
   background-color: #ecf0f1;
-  background: linear-gradient(rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 0.7)),
+  background: linear-gradient(rgba(0, 50, 0, 0.5), rgba(0, 100, 0, 0.7)),
     url(${background});
   background-size: 100%;
   background-position: top right;
