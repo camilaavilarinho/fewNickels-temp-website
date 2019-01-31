@@ -4,11 +4,13 @@ import platform from "../assets/images/curve-background.png";
 import secure from "../assets/images/secure1.png";
 import democratic from "../assets/images/debate.png";
 import easy from "../assets/images/tap.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faLock, faVoteYea, faGrinAlt} from '@fortawesome/free-solid-svg-icons'
 
 /* const mediaQuery = "(max-width: 768px)"; */
 
 const Platform = styled.div`
-  background: linear-gradient(rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 0.7)),
+  background: linear-gradient(rgba(0, 100, 0, 0.5), rgba(0, 100, 0, 0.7)),
     url(${platform});
   /* background: url(${platform}); */
   background-size: 100%;
@@ -33,9 +35,13 @@ const Cards = styled.section`
 `;
 
 const Card = styled.div`
-  background-color: #f3f3f3;
-  border-radius: 50%;
-  padding: 0.5rem;
+  background-color: #2A9D72;
+  border-radius: 5px;
+  padding: 0.2rem;
+  color: #fff;
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 `;
 
 const CardCover = styled.div`
@@ -44,16 +50,12 @@ const CardCover = styled.div`
 
 `;
 
-const CardImage = styled.img`
-  display: block;
-  margin: 0 auto;
-`;
 const CardDescription = styled.div`
   text-align: center;
 `;
 
 const CardTitle = styled.p`
-  color: #30336b;
+  color: #fff;
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -71,7 +73,7 @@ export default () => (
     <Cards>
       <Card>
         <CardCover>
-          <CardImage src={secure} alt="" />
+          <FontAwesomeIcon icon={faLock} size="3x" />
         </CardCover>
         <CardDescription>
           <CardTitle>Secure</CardTitle>
@@ -85,7 +87,7 @@ export default () => (
       </Card>
       <Card>
         <CardCover>
-          <CardImage src={democratic} alt="" />
+          <FontAwesomeIcon icon={faVoteYea} size="3x" />
         </CardCover>
         <CardDescription>
           <CardTitle>Democractic</CardTitle>
@@ -98,7 +100,7 @@ export default () => (
       </Card>
       <Card>
         <CardCover>
-          <CardImage src={easy} alt="" />
+          <FontAwesomeIcon icon={faGrinAlt} size="3x" />
         </CardCover>
         <CardDescription>
           <CardTitle>Easy</CardTitle>
