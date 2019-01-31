@@ -83,14 +83,15 @@ export default class CountDown extends Component {
     const Countdown = styled.div`
       background-color: #ecf0f1;
       padding: 2rem;
-      color: #30336b;
+      color: #fff;
       text-align: center;
       text-transform: uppercase;
       font-weight: 300;
     `;
 
     const Wrapper = styled.div`
-      border: 2px solid #30336b;
+      border: 2px solid #2A9D72;
+      background-color: #2A9D72;
       border-radius: 5px;
       width: 110px;
       padding: 20px;

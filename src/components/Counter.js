@@ -5,7 +5,7 @@ import Countdown from "./Countdown";
 const Counter = styled.div`
   background-color: #ecf0f1;
   padding: 2rem;
-  color: #30336b;
+  color: #2A9D72;
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
