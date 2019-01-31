@@ -5,14 +5,13 @@ import roadmap from "../assets/images/roadmap.png";
 const Roadmap = styled.div`
   background-color: #ecf0f1;
   padding: 3rem 2rem;
-  color: #30336b;
   text-align: center;
   font-weight: 300;
 `;
 
 const H2 = styled.h2`
   font-size: 50px;
-  color: #30336b;
+  color: #726658;
 `;
 
 const RoadmapImage = styled.img`

@@ -12,7 +12,7 @@ const Team = styled.div`
   /* background-position: top right; */
   /* background-repeat: no-repeat; */
   padding: 2rem;
-  color: #30336b;
+  /* color: #30336b; */
   text-align: center;
   font-weight: 300;
 `;
@@ -50,7 +50,7 @@ const CardDescription = styled.div`
 `;
 
 const CardTitle = styled.p`
-  color: #30336b;
+  color: #726658;
   font-size: 20px;
   /* text-transform: uppercase; */
   margin-bottom: 0;
@@ -58,7 +58,7 @@ const CardTitle = styled.p`
 `;
 
 const CardSubtitle = styled.p`
-  /* color: #30336b; */
+  color: #726658;
   font-size: 15px;
   margin-bottom: 0;
   font-weight: bold;

@@ -9,14 +9,14 @@ const Advisors = styled.div`
   background-position: top right;
   /* background-repeat: no-repeat; */
   padding: 2rem;
-  color: #30336b;
+  /* color: #726658; */
   text-align: center;
   font-weight: 300;
 `;
 
 const H2 = styled.h2`
   font-size: 50px;
-  color: #30336b;
+  color: #726658;
 `;
 
 const Cards = styled.section`
@@ -52,10 +52,11 @@ const CardTitle = styled.p`
   /* text-transform: uppercase; */
   margin-bottom: 0;
   font-weight: bold;
+  color: #726658;
 `;
 
 const CardSubtitle = styled.p`
-  /* color: #30336b; */
+  color: #726658;
   font-size: 15px;
   margin-bottom: 0;
   font-weight: bold;
@@ -84,8 +85,6 @@ const advisors = dataAdvisors.map((advisor, i) => {
 export default () => (
   <Advisors id="advisors">
     <H2>Advisors</H2>
-    <Cards>
-      {advisors}
-    </Cards>
+    <Cards>{advisors}</Cards>
   </Advisors>
 );
