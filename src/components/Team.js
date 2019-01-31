@@ -6,10 +6,10 @@ import teamData from "../teamData.json";
 const team = teamData.team;
 
 const Team = styled.div`
-  background: linear-gradient(rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 0.7)),
+  background: linear-gradient(rgba(42, 157, 114, 0.5), rgba(42, 157, 114, 0.7)),
     url(${teamBackground});
-  background-size: 100%;
-  background-position: top right;
+  background-size: 150%;
+  /* background-position: top right; */
   /* background-repeat: no-repeat; */
   padding: 2rem;
   color: #30336b;
