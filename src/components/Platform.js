@@ -7,7 +7,7 @@ import {faLock, faVoteYea, faGrinAlt} from '@fortawesome/free-solid-svg-icons'
 /* const mediaQuery = "(max-width: 768px)"; */
 
 const Platform = styled.div`
-  background: linear-gradient(rgba(0, 100, 0, 0.5), rgba(0, 100, 0, 0.7)),
+  background: linear-gradient(rgba(42, 157, 114, 0.7), rgba(42, 157, 114, 0.7)),
     url(${platform});
   /* background: url(${platform}); */
   background-size: 100%;
