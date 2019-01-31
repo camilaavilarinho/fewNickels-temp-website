@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import platform from "../assets/images/curve-background.png";
-import secure from "../assets/images/secure1.png";
-import democratic from "../assets/images/debate.png";
-import easy from "../assets/images/tap.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faLock, faVoteYea, faGrinAlt} from '@fortawesome/free-solid-svg-icons'
 
