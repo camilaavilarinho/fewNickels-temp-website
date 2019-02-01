@@ -59,9 +59,9 @@ const Button = styled.a`
   border-radius: 5px;
   text-decoration: none;
   &:hover {
-    background-color: #10ac84;
+    background-color: #2A9D72;
     color: #dfe6e9;
-    border: 1.5px solid #10ac84;
+    border: 1.5px solid #2A9D72;
   }
 `;
 
