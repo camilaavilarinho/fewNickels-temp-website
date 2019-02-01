@@ -97,7 +97,7 @@ class RecipeReviewCard extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="company">
         <h2 className={classes.header}>
           The Few Nickels Agricultural Smart Services Co.
         </h2>
