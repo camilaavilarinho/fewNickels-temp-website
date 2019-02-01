@@ -1,28 +1,212 @@
 import React from "react";
-import styled from "styled-components";
-import roadmap from "../assets/images/roadmap.png";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Stepper from "@material-ui/core/Stepper";
+import Step from "@material-ui/core/Step";
+import StepLabel from "@material-ui/core/StepLabel";
+import StepContent from "@material-ui/core/StepContent";
+import Button from "@material-ui/core/Button";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
-const Roadmap = styled.div`
-  background-color: #ecf0f1;
-  padding: 3rem 2rem;
-  text-align: center;
-  font-weight: 300;
-`;
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: "#2A9D72" },
+    secondary: { main: "#2A9D72" }
+  },
+  typography: {
+    fontFamily: '"Viga", sans-serif'
+  }
+});
 
-const H2 = styled.h2`
-  font-size: 50px;
-  color: #726658;
-`;
+const styles = theme => ({
+  root: {
+    width: "100%",
+    backgroundColor: '#ffffff'
+  },
+  header: {
+    fontSize: "50px",
+    color: "#726658",
+    textAlign: "center",
+    paddingTop: '2rem'
+  },
+  stepper: {
+    margin: "0 15rem",
+    paddingBottom: '2rem'
+  },
+  stepLabel: {
+    fontSize: 20
+  },
 
-const RoadmapImage = styled.img`
-width: 100%;
-margin: 3rem 0;
-`
+  icon: {
+    color: "#2A9D72"
+  },
+  button: {
+    marginTop: theme.spacing.unit,
+    marginRight: theme.spacing.unit
+  },
+  actionsContainer: {
+    marginBottom: theme.spacing.unit * 2
+  },
+  resetContainer: {
+    margin: "2rem 15rem",
+    padding: theme.spacing.unit * 3
+  }
+});
 
+function getSteps() {
+  return [
+    "2Q-2018",
+    "3Q-2018",
+    "4Q-2018",
+    "1Q-2019",
+    "2Q-2019",
+    "3Q-2019",
+    "1Q-2020",
+    "4Q-2020",
+    "3Q-2021",
+    "1Q-2022"
+  ];
+}
 
-export default () => (
-  <Roadmap id="roadmap">
-    <H2>Our Roadmap</H2>
-    <RoadmapImage src={roadmap} alt=""/>
-  </Roadmap>
-);
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return ["Business idea development"];
+    case 1:
+      return ["Design of Platform", "Whitepaper", "ICO Preparations"];
+    case 2:
+      return ["Join the Team", "Start Marketing"];
+    case 3:
+      return ["MVP Platform", "ICO Crowdsale Start"];
+    case 4:
+      return ["MVP Complete", "End of ICO"];
+    case 5:
+      return ["Start of Operations in Brazil"];
+    case 6:
+      return ["Expansion over Brazil"];
+    case 7:
+      return ["Full Operations in Brazil"];
+    case 8:
+      return ["Full South America Operations"];
+    case 9:
+      return ["Start Africa Operations"];
+    default:
+      return "Unknown step";
+  }
+}
+
+class VerticalLinearStepper extends React.Component {
+  state = {
+    activeStep: 3
+  };
+
+  handleNext = () => {
+    this.setState(state => ({
+      activeStep: state.activeStep + 1
+    }));
+  };
+
+  handleBack = () => {
+    this.setState(state => ({
+      activeStep: state.activeStep - 1
+    }));
+  };
+
+  handleReset = () => {
+    this.setState({
+      activeStep: 3
+    });
+  };
+
+  render() {
+    const { classes } = this.props;
+    const steps = getSteps();
+    const { activeStep } = this.state;
+
+    return (
+      <MuiThemeProvider theme={theme}>
+        <div className={classes.root} id="roadmap">
+          <h1 className={classes.header}>Our Roadmap</h1>
+          <Stepper
+            activeStep={activeStep}
+            orientation="vertical"
+            className={classes.stepper}
+          >
+            {steps.map((label, index) => (
+              <Step key={label} className={classes.step}>
+                <StepLabel
+                  completed={
+                    label === "1Q-2019" ||
+                    label === "2Q-2018" ||
+                    label === "3Q-2018" ||
+                    label === "4Q-2018"
+                  }
+                  classes={{
+                    label: classes.stepLabel
+                  }}
+                  /* StepIconProps={{ classes: { root: classes.icon } }} */
+                >
+                  {label}
+                </StepLabel>
+                <StepContent>
+                  <ul>
+                    <li>{getStepContent(index)[0]}</li>
+                    {getStepContent(index)[1] ? (
+                      <li>{getStepContent(index)[1]}</li>
+                    ) : null}
+                    {getStepContent(index)[2] ? (
+                      <li>{getStepContent(index)[2]}</li>
+                    ) : null}
+                  </ul>
+
+                  <div className={classes.actionsContainer}>
+                    <div>
+                      <Button
+                        disabled={activeStep === 0}
+                        onClick={this.handleBack}
+                        className={classes.button}
+                      >
+                        Back
+                      </Button>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={this.handleNext}
+                        className={classes.button}
+                      >
+                        {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                      </Button>
+                    </div>
+                  </div>
+                </StepContent>
+              </Step>
+            ))}
+          </Stepper>
+          {activeStep === steps.length && (
+            <Paper square elevation={0} className={classes.resetContainer}>
+              <Typography>
+                All steps completed
+              </Typography>
+              <Button
+                onClick={this.handleReset}
+                className={classes.button}
+                variant="contained"
+                color="primary"
+              >
+                Reset
+              </Button>
+            </Paper>
+          )}
+        </div>
+      </MuiThemeProvider>
+    );
+  }
+}
+
+VerticalLinearStepper.propTypes = {
+  classes: PropTypes.object
+};
+
+export default withStyles(styles)(VerticalLinearStepper);
