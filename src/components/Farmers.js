@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import platform from "../assets/images/curve-background.png";
+import fair from "../assets/images/fair.svg";
+import accessible from "../assets/images/accessible.svg";
+import simple from "../assets/images/simple.svg";
 
 const Farmers = styled.div`
   /* background: linear-gradient(rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 0.7)),
     url(${platform}); */
   /* background: url(${platform}); */
-  background-color: #f3f3f3;
+  background-color: #fff;
   background-size: 100%;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -18,7 +21,7 @@ const Farmers = styled.div`
 
 const H2 = styled.h2`
   font-size: 50px;
-  color: #30336b;
+  color: #2a9d72;
 `;
 
 const Cards = styled.section`
@@ -36,8 +39,19 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #f3f3f3;
+  background-color: #fff;
   /* padding: 0.5rem; */
+`;
+
+const CardCover = styled.div`
+  width: 100%;
+  padding: 20px;
+`;
+
+const CardImage = styled.img`
+  display: block;
+  margin: 0 auto;
+  width: 20%;
 `;
 
 const CardDescription = styled.div`
@@ -45,7 +59,7 @@ const CardDescription = styled.div`
 `;
 
 const CardTitle = styled.p`
-  color: #30336b;
+  color: #2a9d72;
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -61,14 +75,14 @@ const Button = styled.a`
   display: inline-block;
   padding: 10px;
   color: #ffffff;
-  background-color: #30336b;
-  border: 1.5px solid #30336b;
+  background-color: #2a9d72;
+  border: 1.5px solid #2a9d72;
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   &:hover {
-    background-color: #a29bfe;
+    background-color: #1dd1a1;
     color: #dfe6e9;
     border: 1.5px solid #dfe6e9;
   }
@@ -80,6 +94,9 @@ export default () => (
     <Cards>
       <Wrapper>
         <Card>
+          <CardCover>
+            <CardImage src={fair} alt="" />
+          </CardCover>
           <CardDescription>
             <CardTitle>Fair</CardTitle>
             <ItemText>
@@ -94,8 +111,11 @@ export default () => (
           </CardDescription>
         </Card>
         <Card>
+          <CardCover>
+            <CardImage src={accessible} alt="" />
+          </CardCover>
           <CardDescription>
-            <CardTitle>Acessible</CardTitle>
+            <CardTitle>Accessible</CardTitle>
             <ItemText>
               The P2P crypto platform is accessible for all farmers who has some
               way to connect the internet by mobile phone, web systems or rural
@@ -108,6 +128,9 @@ export default () => (
           </CardDescription>
         </Card>
         <Card>
+          <CardCover>
+            <CardImage src={simple} alt="" />
+          </CardCover>
           <CardDescription>
             <CardTitle>Simple</CardTitle>
             <ItemText>
